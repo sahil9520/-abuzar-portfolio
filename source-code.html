@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Source Code | Abu Zar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #0d1117;
+      color: #e6edf3;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+    }
+    h1 { color: #58a6ff; }
+    p { color: #aeb8c4; }
+    pre {
+      padding: 20px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    code { color: #7ee787; }
+    button, a {
+      display: inline-block;
+      padding: 12px 18px;
+      margin: 8px 8px 8px 0;
+      border: 0;
+      border-radius: 7px;
+      background: #238636;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Abu Zar — Source Code</h1>
+    <p>Welcome to my portfolio source code page.</p>
+    <button onclick="copyCode()">Copy Code</button>
+    <a href="index.html">Back to Portfolio</a>
+    <h2>HTML Source Code</h2>
+    <pre><code id="source">&lt;!-- Add your website's HTML code here --&gt;</code></pre>
+  </div>
+  <script>
+    function copyCode() {
+      const code = document.getElementById("source").innerText;
+      navigator.clipboard.writeText(code)
+        .then(() => alert("Code copied!"))
+        .catch(() => alert("Please copy the code manually."));
+    }
+  </script>
+</body>
+</html>
