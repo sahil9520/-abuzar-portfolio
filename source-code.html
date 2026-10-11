@@ -59,6 +59,16 @@
         .catch(() => alert("Please copy the code manually."));
     }
   </script>
+  <script>
+fetch('./index.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('source').textContent = html;
+  })
+  .catch(() => {
+    document.getElementById('source').textContent = 'Unable to load source code.';
+  });
+  </script>
 </body>
 </html>
 <!-- Source Code page updated -->
